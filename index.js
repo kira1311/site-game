@@ -52,71 +52,233 @@
 
 
 
-// Работа с кодом 2 дз
+// // Работа с кодом 2 дз
 
+// // Задание 1
+
+// let password = 'кошки';
+// let ask = prompt('Введите пароль')
+// if (ask === password){
+//     alert('Пароль введен верно')
+// } else {
+//     alert('Пароль введен неправильно')
+// }
+
+
+// // Задание 2
+
+// let c = 11
+// if (c > 0 && c < 10){
+//     alert('Верно')
+// } else {
+//     alert('Неверно')
+// }
+
+// // Задание 3
+
+// let d = 15
+// let e = 9
+// if (d > 100 || e > 100){
+//     alert('Верно')
+// } else {
+//     alert('Неверно')
+// }
+
+// // Задание 4 
+
+// let a = '2';
+// let b = '3';
+// alert(Number(a) + Number(b));
+
+// // Задание 5
+// let season = prompt('Введите номер месяц в году')
+// let monthNumber = parseInt(season);
+
+// if (monthNumber >= 1 && monthNumber <= 12){
+//     switch (monthNumber){
+//         case 12:
+//         case 1:
+//         case 2:
+//             console.log('Зима')
+//             break
+//         case 3:
+//         case 4:
+//         case 5:
+//             console.log('Весна')
+//             break
+//         case 6:
+//         case 7:
+//         case 8:
+//             console.log('Лето')
+//             break
+//         case 9:
+//         case 10:
+//         case 11:
+//             console.log('Осень')
+//             break
+//         default:
+//             console.log("Неверный номер месяца");
+//     }
+// }
+
+
+
+// // Работа с кодом 3 дз
+
+// // Задание 1 
+// let kol = 1
+
+// while (kol < 3) {
+//     alert("Привет!");
+//     kol++
+// }
+
+// // Задание 2 
+// let i = 1;
+
+// while (i < 6) {
+//     console.log(i)
+//     i++;
+// }
+
+// // // Задание 3 
+// let p = 7;
+
+// do {
+//     console.log(p)
+//     p++;
+// } while (p<23)
+
+
+// // Задание 4
+
+// const obj = {
+//     "Коля" : '200',
+//     "Вася" : '300',
+//     "Петя" : '400'
+// }
+
+// for (let key in obj) {
+//     console.log (`${key} — зарплата ${obj[key]} долларов.`)
+// }
+
+// // Задание 5
+
+// let n = 1000
+// let num = 0
+
+// while (n>50) {
+//     n = n/2
+//     console.log (n)
+//     num++
+// }
+
+// console.log(`Итоговое число: ${n}`)
+// console.log(`Итераций: ${num}`)
+
+// // Задание 6
+// let firstFriday = 6;
+
+// for (let day = firstFriday; day <= 31; day += 7) {
+//     console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
+// }
+
+
+
+// Работа с кодом 4 дз
 // Задание 1
 
-let password = 'кошки';
-let ask = prompt('Введите пароль')
-if (ask === password){
-    alert('Пароль введен верно')
-} else {
-    alert('Пароль введен неправильно')
+function minNumber(a, b) {
+    if (a < b) {
+        console.log (a);
+    } else {
+        console.log (b);
+    }
 }
 
+minNumber(8, 4)
 
 // Задание 2
 
-let c = 11
-if (c > 0 && c < 10){
-    alert('Верно')
-} else {
-    alert('Неверно')
+function count(c) {
+    if (c % 2 === 0) {
+        console.log ('Число четное');
+    } else {
+        console.log ('Число нечетное');
+    }
 }
+
+count (5)
 
 // Задание 3
 
-let d = 15
-let e = 9
-if (d > 100 || e > 100){
-    alert('Верно')
-} else {
-    alert('Неверно')
+function printSquare(num) {
+    console.log(num * num);
 }
 
-// Задание 4 
+printSquare (3)
 
-let a = '2';
-let b = '3';
-alert(Number(a) + Number(b));
-
-// Задание 5
-let season = prompt('Введите номер месяц в году')
-let monthNumber = parseInt(season);
-
-if (monthNumber >= 1 && monthNumber <= 12){
-    switch (monthNumber){
-        case 12:
-        case 1:
-        case 2:
-            console.log('Зима')
-            break
-        case 3:
-        case 4:
-        case 5:
-            console.log('Весна')
-            break
-        case 6:
-        case 7:
-        case 8:
-            console.log('Лето')
-            break
-        case 9:
-        case 10:
-        case 11:
-            console.log('Осень')
-            break
-        default:git add .
-            console.log("Неверный номер месяца");
+// Задание 4
+ 
+function checkAge() {
+    let age = prompt("Сколько вам лет?");
+    if (age === null) {
+        return; 
+    } age = Number(age);
+    if (isNaN(age) || age < 0) {
+        alert('Вы ввели неправильное значение');
+    } else if (age >= 0 && age <= 12) {
+        alert('Привет, друг!');
+    } else if (age >= 13) {
+        alert('Добро пожаловать!');
     }
 }
+
+// Задание 5
+
+function multiplyNumbers(a, b) {
+    const num1 = Number(a);
+    const num2 = Number(b);
+    if (isNaN(num1) || isNaN(num2)) {
+        return 'Одно или оба значения не являются числом';
+    }
+    return num1 * num2;
+}
+
+// Задание 6
+
+function cubeNumber() {
+    let input = prompt("Введите число:");
+    let num = Number(input);
+    if (isNaN(num)) {
+        return 'Переданный параметр не является числом';
+    }
+    let cube = num * num * num;
+    return `${num} в кубе равняется ${cube}`;
+}
+
+// Задание 7 
+
+const circle1 = {
+    radius: 5,
+    
+    getArea: function() {
+        return Math.PI * this.radius * this.radius;
+    },
+    
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+const circle2 = {
+    radius: 10,
+    
+    getArea: function() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+    
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};
